@@ -20,5 +20,40 @@ body{
         @extend %btn;
         background: $blue-gradient;
        }
+       button{
+        @extend %btn;
+        background: $blue-gradient;
+        margin-right:20px !important;
+        margin-left:10px !important;
+        font-size: 20px;
+       }
+       input{
+        @extend %input;
+       }
+       table{
+        // border:3px dotted $white;
+        // width:90%;
+        tr{
+            width:90%;
+            box-shadow: $shadow;
+            th{
+                width:300px;
+                border:2px solid $primary-color;
+                padding:8px;
+                background: $violet-gradient;
+                &:last-child{
+                    width:auto; 
+                }
+            }
+            td{
+                width:300px;
+                border:2px solid $primary-color;
+                text-align: center;
+                &:last-child{
+                    width:auto;  
+                }
+            }
+        }
+       }
     }
 }

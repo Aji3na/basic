@@ -13,6 +13,7 @@ function StylingTypes6() {
     <>
     <h3>Class 6 : Styling Types</h3>
     <InlineStyle />
+    <hr />
     <StyledComponentStyling />
     </>
   )
