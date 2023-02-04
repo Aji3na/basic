@@ -3,7 +3,7 @@ import React from 'react'
 
 
 const name = "Aji"
-const content = <h3>React tutorial By {name}</h3>
+const content = <h5>React tutorial By {name}</h5>
 const list = (
   <ul>
     <li>One</li>
@@ -32,11 +32,12 @@ function Jsx() {
   return (
     <>
       <div>{content}</div>
-      <h3>Class 1</h3>
+      <h3>Class 1 : Different type of element creation</h3>
       <h4> Different type of element creation</h4>
       <a href="#">{list}</a>
       <a href="#">{list1}</a>
       <a href="#">{list3}</a>
+      <hr />
       <h4>Conditions</h4>
       <ul>
         <li>JsxCondition</li>
@@ -81,7 +82,7 @@ export const JsxConditionBlockWithoutElse = () => {
       {
         10 > 5 &&
         <>
-          <h4>Block conditions Block Without Else</h4>
+          <h4>Condition Block Without Else</h4>
           <ul>
             <li>One</li>
             <li>Two</li>

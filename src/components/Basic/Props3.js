@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 const Props3 = (props) => {
     return (
         <div>
-            <h3>Class3</h3>
-            <h4>Props</h4>
+            <h3>Class 3 : Props Concept</h3>
+            <h4>Props Normal</h4>
             <h4>Employee Details</h4>
             <ul>
                 <li>Employee ID: {props.id}</li>
@@ -23,8 +23,11 @@ const Props3 = (props) => {
                     )}
                 </ul>
             </ul>
+            <hr />
             <PropsAnotherWay name1="Aji" id1={33} email1="aji@gmail.com" skills1={['HTML', 'css', 'React', 'Nextjs']} />
+            <hr />
             <PropsForManyEmployee />
+            <hr />
             <PropsTypeEmployee name3="Aji" id3={33} email3="aji@gmail.com" skills3={['HTML', 'css', 'React', 'Nextjs']} />
         </div>
     )

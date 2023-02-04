@@ -3,19 +3,21 @@ import React from 'react'
 function DifferentComponents2() {
   return (
     <div>
-        <h3>Class 2</h3>
+        <h3>Class 2 : Different type of Components</h3>
         <h4>Different type of Components</h4>
         <ul>
             <li>
-            FunctionalComponent
+            <h4>Functional Component</h4>
             <div><FunctionalComponent /></div>
             </li>
+            <hr />
             <li>
-            ClassComponent
+            <h4>Class Component</h4>
             <div><ClassComponent /></div>
             </li>
+            <hr />
             <li>
-            ArrowFunctionalComponent
+            <h4>ArrowFunctional Component</h4>
             <div><ArrowFunctionalComponent /></div>
             </li>
             
