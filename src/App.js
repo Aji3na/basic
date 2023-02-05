@@ -6,8 +6,9 @@ import SpredingStudent from "./components/Basic/Spread4";
 import ChildrenProps5 from "./components/Basic/ChildrenProps5";
 import "./Assets/Sass/Common.css"
 import StylingTypes6 from "./components/Basic/StylingTypes6";
-import UseState7 from "./components/Basic/Hooks/UseState7";
 import ProjectsAll from "./components/Projects/ProjectsAll";
+import Hook from "./components/Basic/Hooks/Hook";
+import FetchData9 from "./components/Basic/FetchData9";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
 <Props3 name="Aji" id={3} email="aji@gmail.com" skills={['HTML','css','React','Nextjs']} />
 <SpredingStudent />
 <StylingTypes6 />
-<UseState7 />
+<Hook />
+<FetchData9 />
 <ProjectsAll />
 </ChildrenProps5>
 </>

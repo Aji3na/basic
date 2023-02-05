@@ -13,7 +13,7 @@ body{
         h4{
             @include sub-title;
         }
-       li{
+       ul{
         color:$primary-color;
        }
        .inline-style{

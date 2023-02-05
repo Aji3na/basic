@@ -36,7 +36,7 @@ body {
     @media screen and (max-width: 600px) {
       body .common-style h4 {
         font-size: 16px; } }
-  body .common-style li {
+  body .common-style ul {
     color: #ee187f; }
   body .common-style .inline-style {
     background: linear-gradient(to left bottom, #61d5b8, #44cfc4, #26c8cf, #0fc1d8, #1eb8de); }
