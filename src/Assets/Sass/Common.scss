@@ -55,5 +55,12 @@ body{
             }
         }
        }
+       .card{
+        @extend %btn;
+        ul{
+            color:white!important;
+        }
+        
+       }
     }
 }

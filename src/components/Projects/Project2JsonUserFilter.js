@@ -95,7 +95,6 @@ const obj = [{
     }
 }];
 function Project2JsonUserFilter() {
-
     return (
         <div>
             <h3>Project 2 : Json User Filter</h3>
@@ -119,25 +118,26 @@ function Project2JsonUserFilter() {
                             <td>{item.designation}</td>
                             <td>{item.team}</td>
                             <td>{item.manager}</td>
-                            <td><img src={item.img} style={{width:50,height:50}} /></td>
+                            <td><img src={item.img} style={{ width: 50, height: 50 }} /></td>
                             <td>{item.short}</td>
                         </tr>
                     )))}
                 </tbody>
             </table>
+            <hr />
             <JsonEmployeeFilter />
         </div>
-    )
+  )
 }
-const JsonEmployeeFilter=()=>{
+const JsonEmployeeFilter = () => {
     const [team, setTeam] = useState([]);
-    return(
+    return (
         <>
-        <h4>Filtering the Manager and their Team</h4>
-        <input placeholder='Filter By Id (58 to 67)' value={team} onChange={(event)=>{setTeam(event.target.value)}} />
-        {console.log(team)}
-        <h4>Manager Details</h4>
-          <table>
+            <h4>Filtering the Manager and their Team</h4>
+            <input placeholder='Filter By Id (58 to 67)' value={team} onChange={(event) => { setTeam(event.target.value) }} />
+            {console.log(team)}
+            <h4>Manager Details</h4>
+            <table>
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -150,32 +150,32 @@ const JsonEmployeeFilter=()=>{
                     </tr>
                 </thead>
                 <tbody>
-        {
-            team.length>0 && obj.map((e)=>Object.values(e).map((item)=>{
-                return(
-                    <>
-                    { item.id.includes(team) ? <tr key={item.id}>
-                    <td>{item.id}</td>
-                    <td>{item.name}</td>
-                    <td>{item.designation}</td>
-                    <td>{item.team}</td>
-                    <td>{item.manager}</td>
-                    <td><img src={item.img} style={{width:50,height:50}} /></td>
-                    <td>{item.short}</td>
-                </tr> : ""}
-                </>
-                    
-                );
-            }
-            
-              
-            ))
-        }
-        
-        </tbody>
-        </table>
-        <h4>Manager Team Member's Details</h4>
-        <table>
+                    {
+                        team.length > 0 && obj.map((e) => Object.values(e).map((item) => {
+                            return (
+                                <>
+                                    {item.id.includes(team) ? <tr key={item.id}>
+                                        <td>{item.id}</td>
+                                        <td>{item.name}</td>
+                                        <td>{item.designation}</td>
+                                        <td>{item.team}</td>
+                                        <td>{item.manager}</td>
+                                        <td><img src={item.img} style={{ width: 50, height: 50 }} /></td>
+                                        <td>{item.short}</td>
+                                    </tr> : ""}
+                                </>
+
+                            );
+                        }
+
+
+                        ))
+                    }
+
+                </tbody>
+            </table>
+            <h4>Manager Team Member's Details</h4>
+            <table>
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -188,30 +188,30 @@ const JsonEmployeeFilter=()=>{
                     </tr>
                 </thead>
                 <tbody>
-        
-        {
-            team.length>0 && obj.map((e)=>Object.values(e).map((item)=>{
-                return(
-                    <>
-                    { item.manager.includes(team) ? <tr key={item.id}>
-                    <td>{item.id}</td>
-                    <td>{item.name}</td>
-                    <td>{item.designation}</td>
-                    <td>{item.team}</td>
-                    <td>{item.manager}</td>
-                    <td><img src={item.img} style={{width:50,height:50}} /></td>
-                    <td>{item.short}</td>
-                </tr> : ""}
-                </>
-                    
-                );
-            }
-            
-              
-            ))
-        }
-        </tbody>
-        </table>
+
+                    {
+                        team.length > 0 && obj.map((e) => Object.values(e).map((item) => {
+                            return (
+                                <>
+                                    {item.manager.includes(team) ? <tr key={item.id}>
+                                        <td>{item.id}</td>
+                                        <td>{item.name}</td>
+                                        <td>{item.designation}</td>
+                                        <td>{item.team}</td>
+                                        <td>{item.manager}</td>
+                                        <td><img src={item.img} style={{ width: 50, height: 50 }} /></td>
+                                        <td>{item.short}</td>
+                                    </tr> : ""}
+                                </>
+
+                            );
+                        }
+
+
+                        ))
+                    }
+                </tbody>
+            </table>
         </>
     )
 }
