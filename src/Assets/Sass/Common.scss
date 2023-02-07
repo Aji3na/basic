@@ -4,8 +4,23 @@ body{
     font-family: $font-family;
     background-color: black;
     color:white;
-    padding:30px;
+    margin:0px;
+    Header{
+        background:$blue-gradient;
+        padding:30px;
+        box-shadow: $shadow;
+        position:fixed;
+        width:100%;
+        top:0;
+        a{
+            color:white;
+            padding:10px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+    }
     .common-style{
+        padding:0px 30px;
         h3{
             @include title;
             @extend %btn;

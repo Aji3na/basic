@@ -1,35 +1,34 @@
 // Jsx is the default export so mentione as separate and other exported functions written in the {}
-import DifferentComponents2 from "./components/Basic/DifferentComponents2";
-import Jsx, { JsxCondition, JsxConditionBlock, JsxConditionBlockWithoutElse } from "./components/Basic/Jsx1";
-import Props3 from "./components/Basic/Props3";
-import SpredingStudent from "./components/Basic/Spread4";
-import ChildrenProps5 from "./components/Basic/ChildrenProps5";
 import "./Assets/Sass/Common.css"
-import StylingTypes6 from "./components/Basic/StylingTypes6";
-import ProjectsAll from "./components/Projects/ProjectsAll";
-import Hook from "./components/Basic/Hooks/Hook";
-import FetchData9 from "./components/Basic/FetchData9";
+import { BrowserRouter,Routes,Route,Link} from "react-router-dom";
+import Home from "./Pages/Home";
+import Basics from "./Pages/Basics";
+import Projects from "./Pages/Projects";
+import Hooks from "./Pages/Hooks";
+import Classes from "./Pages/Classes";
 
-function App() {
+function App(props) {
   return (
 <>
+{/* Routers implemented 
+install npm i react-router-dom@ */}
+<BrowserRouter>
+<header>
+<Link to="/">Home</Link>
+<Link to="/basics">Basics</Link>
+<Link to="/classes">Classes</Link>
+<Link to="/hooks">Hooks</Link>
+<Link to="/projects">Projects</Link>
+</header>
 <h1>React Basic Learing</h1>
-<ChildrenProps5>
-<Jsx />
-<hr />
-<JsxCondition />
-<hr />
-<JsxConditionBlock />
-<hr />
-<JsxConditionBlockWithoutElse />
-<DifferentComponents2 />
-<Props3 name="Aji" id={3} email="aji@gmail.com" skills={['HTML','css','React','Nextjs']} />
-<SpredingStudent />
-<StylingTypes6 />
-<Hook />
-<FetchData9 />
-<ProjectsAll />
-</ChildrenProps5>
+<Routes>
+  <Route path="/" element={<Home />}/>
+  <Route path="/basics" element={<Basics />}/>
+  <Route path="/projects" element={<Projects />}/>
+  <Route path="/hooks" element={<Hooks />}/>
+  <Route path="/classes" element={<Classes />}/>
+</Routes>
+</BrowserRouter>
 </>
   );
 }
